@@ -12,12 +12,9 @@ function onLoginSubmit(event) {
     localStorage.setItem(USERNAME_KEY, username);
     paintGreetings(username);}
 
-    loginForm.addEventListener("submit", onLoginSubmit);
-
-function paintGreetings(){
-    greeting,innerText = `Hello {$username}`;
-    greeting.classList.remove(HIDDEN_CLASSNAME);
-}
+function paintGreetings(username){
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);}
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
